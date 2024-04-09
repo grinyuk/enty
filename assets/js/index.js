@@ -6,3 +6,7 @@ function myFunction() {
         x.className = "nav";
     }
 }
+
+function handleClick(myRadio) {
+    document.getElementById("optionImage").src = `./assets/images/features/banking${myRadio.value}.png`
+}

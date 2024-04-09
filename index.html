@@ -65,7 +65,7 @@
                 Mobile app, web app, designated email & more ways to upload documents. 
                 Once you do that, we will file reports on the behalf of your company
             </p>
-            <img src="" alt="app-example">
+            <img src="./assets/images/features/upload-file.png" alt="app-example">
         </div>
         <div>
             <div class="features__reporting">
@@ -76,9 +76,12 @@
                     Annual reports, VAT returns, OSS/IOSS declarations, TSDs, you name it. 
                     We can take care of all reports that exist in Estonia. 
                 </p>
-                <img src="" alt="a4 paper">
+                <img src="./assets/images/features/reports.png" alt="report documents">
             </div>
             <div class="features__accounting">
+                <picture>
+                    <img src="./assets/images/features/boringJohn.png" alt="the man is writing something">
+                </picture>
                 <h2>
                     Professional Accountant by your side
                 </h2>
@@ -86,7 +89,6 @@
                     You don’t need to know anything about accounting. 
                     Free consultations with professional accountants and constant support from your personal manager 
                 </p>
-                <img src="" alt="the man is writing something">
             </div>
         </div>
         <div class="features__banking">
@@ -97,17 +99,25 @@
                 Will help you make accounting even easier. Spend less time and money on boring paperwork 
             </p>
             <div>
-                <form action="">
-                    <input type="radio" checked>
-                    <label for="">Connect your bank account</label><br>
-                    <input type="radio">
-                    <label for="">Issue and send invoices to your clients</label><br>
-                    <input type="radio">
-                    <label for="">Upload invoices for the period</label><br>
-                    <input type="radio">
-                    <label for="">Our accountant will create and file the report</label><br>
-                </form>
-                <img src="" alt="banking">
+                <div class="banking-radio">
+                    <div>
+                        <input type="radio" name="option" onclick="handleClick(this);" id="bankingOption1" value="1" checked>
+                        <label for="bankingOption1">Connect your bank account</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="option" onclick="handleClick(this);" id="bankingOption2" value="2">
+                        <label for="bankingOption2">Issue and send invoices to your clients</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="option" onclick="handleClick(this);" id="bankingOption3" value="3">
+                        <label for="bankingOption3">Upload invoices for the period</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="option" onclick="handleClick(this);" id="bankingOption4" value="4">
+                        <label for="bankingOption4">Our accountant will create and file the report</label>
+                    </div>
+                </div>
+                <img src="./assets/images/features/banking1.png" id="optionImage" alt="banking">
             </div>
         </div>
     </div>
