@@ -16,7 +16,8 @@ a {
     text-decoration: none;
 }
 
-.navbar>div, .navbar>nav{
+.navbar>div,
+.navbar>nav {
     flex-basis: 50%;
 }
 
@@ -77,7 +78,8 @@ a {
     margin: 36px 0 48px;
 }
 
-.header__left, .header__right {
+.header__left,
+.header__right {
     width: 50%;
 }
 
@@ -87,9 +89,6 @@ a {
 
 .wrapper {
     overflow: hidden;
-}
-
-.header__left {
 }
 
 .header__button {
@@ -138,12 +137,12 @@ a {
 .features__accounting,
 .features__banking {
     border-radius: 48px;
-    
+
 }
 
 .features__reporting,
 .features__accounting {
-   flex-basis: 49%;
+    flex-basis: 49%;
 }
 
 .features>div:nth-child(2) {
@@ -239,11 +238,11 @@ a {
     padding: 24px 330px 107PX;
 }
 
-.features__banking img {
+.features__banking .banking__container_desktop img {
     border-bottom-right-radius: 48px;
 }
 
-.features__banking>div {
+.banking__container_desktop {
     display: flex;
     padding-left: 74px;
     justify-content: space-between;
@@ -282,7 +281,7 @@ a {
 
 .features__banking input:checked::before {
     display: block;
-    top:  calc(100% - (50% + 15px));
+    top: calc(100% - (50% + 15px));
     left: calc(100% - (50% + 15px));
 }
 
@@ -308,7 +307,21 @@ a {
     border: 4px solid #000000A3;
 }
 
+/* Slider */
 
+.slider-wrapper {
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    transition: 0.5s;
+}
+
+.item {
+    flex: 1 0 100%;
+}
 
 
 
@@ -331,7 +344,7 @@ a {
         align-items: flex-start;
     }
 
-    .nav li:not(:nth-last-child(2))  {
+    .nav li:not(:nth-last-child(2)) {
         display: none;
     }
 
@@ -361,10 +374,11 @@ a {
     }
 
     .nav.responsive .nav__item:not(:first-child) {
-        padding-top: 5px;        
+        padding-top: 5px;
     }
 
-    body .navbar>div, body .navbar>nav{
+    body .navbar>div,
+    body .navbar>nav {
         flex-basis: 0;
     }
 
@@ -395,7 +409,8 @@ a {
         margin-bottom: 36px;
     }
 
-    .header__left, .header__right {
+    .header__left,
+    .header__right {
         width: 100%;
     }
 
@@ -405,7 +420,7 @@ a {
         align-items: center;
         padding-bottom: 32px;
     }
-    
+
     .header__right {
         height: 100vw;
     }
@@ -471,18 +486,118 @@ a {
         transform: none;
         vertical-align: bottom;
     }
+
+    .features__reporting h2,
+    .features__accounting h2 {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 400;
+        width: 275px;
+        text-align: center;
+    }
+
+    .features__reporting .features__description,
+    .features__accounting .features__description {
+        width: 80%;
+    }
+
+    .features__reporting {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 48px 0 0 0;
+    }
+
+    .features__reporting img {
+        padding-left: 5px;
+    }
+
+    .features__accounting {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 48px 0 64px;
+        margin-top: 24px;
+    }
+
+    .features__accounting img {
+        width: 90%;
+    }
+
+    .features__accounting picture:hover::before {
+        content: url('../images/features/johnsAlert-small.png');
+        left: 38%;
+        top: -100px;
+    }
+
+    .features__banking {
+        padding: 48px 0;
+    }
+
+    .features__banking .section-title {
+        padding: 0 28px;
+    }
+
+    .features__banking .features__description {
+        padding: 16px 34px 56px;
+    }
+
+    .banking__container_desktop {
+        display: none;
+    }
+
+    .banking__container_mobile .item {
+        padding: 0;
+        align-items: center;
+    }
+
+    .banking__container_mobile .item img {
+        display: block;
+        margin: auto;
+    }
+
+    .banking__container_mobile .item p {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        text-align: center;
+        width: 295px;
+        margin: 0 auto;
+        padding-bottom: 15px;
+    }
+
+    .slider-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .banking__container_mobile .slider-buttons {
+        padding-top: 15px;
+    }
+
+    .prev,
+    .next {
+        height: 56px;
+        width: 56px;
+        border-radius: 50%;
+        background: #0000000A;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
 }
 
 @media only screen and (min-width: 600px) {
     .wrapper {
         padding: 16px 16px 0;
     }
-    
+
     body .navbar>div {
         flex-basis: 10%;
     }
 
-    body .navbar>nav{
+    body .navbar>nav {
         flex-basis: 90%;
     }
 
@@ -490,16 +605,25 @@ a {
         flex-direction: column;
     }
 
-    .header__left, .header__right {
+    .header__left,
+    .header__right {
         width: 100%;
     }
-    
+
     .header__right {
         height: 700px;
     }
 
     .features>div:nth-child(2) {
         flex-direction: column;
+    }
+
+    .banking__container_mobile {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 40px;
     }
 }
 
@@ -517,7 +641,7 @@ a {
         flex-basis: 20%;
     }
 
-    body .navbar>nav{
+    body .navbar>nav {
         flex-basis: 80%;
     }
 
@@ -525,12 +649,9 @@ a {
         flex-direction: column;
     }
 
-    .header__left, .header__right {
+    .header__left,
+    .header__right {
         width: 100%;
-    }
-    
-    .features>div:nth-child(2) {
-        flex-direction: row;
     }
 }
 
@@ -548,7 +669,7 @@ a {
         flex-basis: 30%;
     }
 
-    body .navbar>nav{
+    body .navbar>nav {
         flex-basis: 70%;
     }
 
@@ -556,7 +677,8 @@ a {
         flex-direction: column;
     }
 
-    .header__left, .header__right {
+    .header__left,
+    .header__right {
         width: 100%;
     }
 
@@ -566,6 +688,10 @@ a {
 
     .features {
         padding-top: 100px;
+    }
+
+    .section-title {
+        font-size: 80px;
     }
 }
 
@@ -578,11 +704,17 @@ a {
     .nav {
         flex-direction: row;
     }
-    
-    body .navbar>div, body .navbar>nav{
+
+    body .navbar>div,
+    body .navbar>nav {
         flex-basis: 50%;
     }
+
     .header__content {
+        flex-direction: row;
+    }
+    
+    .features>div:nth-child(2) {
         flex-direction: row;
     }
 }

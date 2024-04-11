@@ -98,7 +98,7 @@
             <p class="features__description">
                 Will help you make accounting even easier. Spend less time and money on boring paperwork 
             </p>
-            <div>
+            <div class="banking__container_desktop">
                 <div class="banking-radio">
                     <div>
                         <input type="radio" name="option" onclick="handleClick(this);" id="bankingOption1" value="1" checked>
@@ -118,6 +118,41 @@
                     </div>
                 </div>
                 <img src="./assets/images/features/banking1.png" id="optionImage" alt="banking">
+            </div>
+            <div class="banking__container_mobile">
+                <div class="slider-wrapper" data-items="1">
+                    <div class="slider">
+                        <div class="item">
+                            <p>Connect your bank account</p>
+                            <img src="./assets/images/features/banking-small-1.png" alt="slide 1">
+                        </div>
+                        <div class="item">
+                            <p>Issue and send invoices to your clients</p>
+                            <img src="./assets/images/features/banking-small-2.png" alt="slide 2">
+                        </div>
+                        <div class="item">
+                            <p>Upload invoices for the period</p>
+                            <img src="./assets/images/features/banking-small-3.png" alt="slide 3">
+                        </div>
+                        <div class="item">
+                            <p>Our accountant will create and file the report</p>
+                            <img src="./assets/images/features/banking-small-4.png" alt="slide 4">
+                        </div>
+                        <!-- Never use inline style. This is just for demo. -->
+                    </div>
+                    <div class="slider-buttons">
+                        <div class="prev">
+                            <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.66536 0.756458L1.02977 7.27564C0.622574 7.67569 0.622574 8.32429 1.02977 8.72434L7.66536 15.2435C8.07255 15.6436 8.73274 15.6436 9.13994 15.2435C9.54713 14.8435 9.54713 14.1949 9.13994 13.7948L4.28431 9.02438H21.2305V6.9756H4.28431L9.13994 2.20516C9.54713 1.80512 9.54713 1.15651 9.13994 0.756458C8.73274 0.356409 8.07255 0.356409 7.66536 0.756458Z" fill="black"/>
+                            </svg>                            
+                        </div>
+                        <div class="next">
+                            <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3346 0.756458L20.9702 7.27564C21.3774 7.67569 21.3774 8.32429 20.9702 8.72434L14.3346 15.2435C13.9274 15.6436 13.2673 15.6436 12.8601 15.2435C12.4529 14.8435 12.4529 14.1949 12.8601 13.7948L17.7157 9.02438H0.769531V6.9756H17.7157L12.8601 2.20516C12.4529 1.80512 12.4529 1.15651 12.8601 0.756458C13.2673 0.356409 13.9274 0.356409 14.3346 0.756458Z" fill="black"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
