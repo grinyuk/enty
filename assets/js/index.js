@@ -7,7 +7,7 @@ function myFunction() {
     }
 }
 
-function handleClick(myRadio) {
+function handleBankingClick(myRadio) {
     document.getElementById("optionImage").src = `./assets/images/features/banking${myRadio.value}.png`;
 }
 
@@ -30,3 +30,9 @@ ELS(".slider-wrapper").forEach(EL_par => {
   EL(".prev", EL_par).addEventListener("click", prev);
   EL(".next", EL_par).addEventListener("click", next);
 });
+
+
+function handleServiceClick(elem) {
+    const target = elem.parentElement.querySelector("p");
+    target.style.display = target.style.display === "block" ? "none" : "block";
+}

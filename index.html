@@ -1,164 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Accounting for Estonian Company</title>
 </head>
-<body>
-<div class="wrapper">
-    <header class="header">
-        <div class="navbar">
-            <div>
-                <img src="./assets/images/logo/logo.png" class="navbar__logo" alt="logo">
-            </div>
-            <nav>
-                <ul class="nav" id="myNav">
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Control panel</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Incorporation</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Accounting</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Explore</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link nav-button" href="#">Get started</a>
-                    </li>
-                    <li class="icon">
-                        <a href="javascript:void(0);" onclick="myFunction()">
-                            <img src="./assets//images/header/union.png" alt="burger-menu icon">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="header__content">
-            <div class="header__left">
-                <h1 class="header__title">Accounting for Estonian Company</h1>
-                <p class="header__description">
-                    Don’t sweat yourself with Accounting!
-                    Save time and money with Enty
-                </p>
-                <a class="header__button" href="#">Let’s start</a>
-            </div>
-            <div class="header__right">
-                <img src="./assets/images/header/laptop.png" id="laptopHeader" alt="laptop">
-            </div>
-        </div>
-    </header>
-    <div class="features">
-        <div class="features__upload">
-            <h2 class="section-title">
-                Upload the Documents <br>
-                How You Want
-            </h2>
-            <p class="features__description">
-                Mobile app, web app, designated email & more ways to upload documents. 
-                Once you do that, we will file reports on the behalf of your company
-            </p>
-            <img src="./assets/images/features/upload-file.png" alt="app-example">
-        </div>
-        <div>
-            <div class="features__reporting">
-                <h2>
-                    All types of reporting
-                </h2>
-                <p class="features__description">
-                    Annual reports, VAT returns, OSS/IOSS declarations, TSDs, you name it. 
-                    We can take care of all reports that exist in Estonia. 
-                </p>
-                <img src="./assets/images/features/reports.png" alt="report documents">
-            </div>
-            <div class="features__accounting">
-                <picture>
-                    <img src="./assets/images/features/boringJohn.png" alt="the man is writing something">
-                </picture>
-                <h2>
-                    Professional Accountant by your side
-                </h2>
-                <p class="features__description">
-                    You don’t need to know anything about accounting. 
-                    Free consultations with professional accountants and constant support from your personal manager 
-                </p>
-            </div>
-        </div>
-        <div class="features__banking">
-            <h2 class="section-title">
-                Unlimited Invoicing, Connection to Bank account, Multi-currency Accounting 
-            </h2>
-            <p class="features__description">
-                Will help you make accounting even easier. Spend less time and money on boring paperwork 
-            </p>
-            <div class="banking__container_desktop">
-                <div class="banking-radio">
-                    <div>
-                        <input type="radio" name="option" onclick="handleClick(this);" id="bankingOption1" value="1" checked>
-                        <label for="bankingOption1">Connect your bank account</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="option" onclick="handleClick(this);" id="bankingOption2" value="2">
-                        <label for="bankingOption2">Issue and send invoices to your clients</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="option" onclick="handleClick(this);" id="bankingOption3" value="3">
-                        <label for="bankingOption3">Upload invoices for the period</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="option" onclick="handleClick(this);" id="bankingOption4" value="4">
-                        <label for="bankingOption4">Our accountant will create and file the report</label>
-                    </div>
-                </div>
-                <img src="./assets/images/features/banking1.png" id="optionImage" alt="banking">
-            </div>
-            <div class="banking__container_mobile">
-                <div class="slider-wrapper" data-items="1">
-                    <div class="slider">
-                        <div class="item">
-                            <p>Connect your bank account</p>
-                            <img src="./assets/images/features/banking-small-1.png" alt="slide 1">
-                        </div>
-                        <div class="item">
-                            <p>Issue and send invoices to your clients</p>
-                            <img src="./assets/images/features/banking-small-2.png" alt="slide 2">
-                        </div>
-                        <div class="item">
-                            <p>Upload invoices for the period</p>
-                            <img src="./assets/images/features/banking-small-3.png" alt="slide 3">
-                        </div>
-                        <div class="item">
-                            <p>Our accountant will create and file the report</p>
-                            <img src="./assets/images/features/banking-small-4.png" alt="slide 4">
-                        </div>
-                        <!-- Never use inline style. This is just for demo. -->
-                    </div>
-                    <div class="slider-buttons">
-                        <div class="prev">
-                            <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.66536 0.756458L1.02977 7.27564C0.622574 7.67569 0.622574 8.32429 1.02977 8.72434L7.66536 15.2435C8.07255 15.6436 8.73274 15.6436 9.13994 15.2435C9.54713 14.8435 9.54713 14.1949 9.13994 13.7948L4.28431 9.02438H21.2305V6.9756H4.28431L9.13994 2.20516C9.54713 1.80512 9.54713 1.15651 9.13994 0.756458C8.73274 0.356409 8.07255 0.356409 7.66536 0.756458Z" fill="black"/>
-                            </svg>                            
-                        </div>
-                        <div class="next">
-                            <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3346 0.756458L20.9702 7.27564C21.3774 7.67569 21.3774 8.32429 20.9702 8.72434L14.3346 15.2435C13.9274 15.6436 13.2673 15.6436 12.8601 15.2435C12.4529 14.8435 12.4529 14.1949 12.8601 13.7948L17.7157 9.02438H0.769531V6.9756H17.7157L12.8601 2.20516C12.4529 1.80512 12.4529 1.15651 12.8601 0.756458C13.2673 0.356409 13.9274 0.356409 14.3346 0.756458Z" fill="black"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer></footer>
-</div>
 
-<script src="./assets/js/index.js"></script>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="navbar">
+                <div>
+                    <img src="./assets/images/logo/logo.png" class="navbar__logo" alt="logo">
+                </div>
+                <nav>
+                    <ul class="nav" id="myNav">
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Control panel</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Incorporation</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Accounting</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Explore</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link nav-button" href="#">Get started</a>
+                        </li>
+                        <li class="icon">
+                            <a href="javascript:void(0);" onclick="myFunction()">
+                                <img src="./assets//images/header/union.png" alt="burger-menu icon">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__content">
+                <div class="header__left">
+                    <h1 class="header__title">Accounting for Estonian Company</h1>
+                    <p class="header__description">
+                        Don’t sweat yourself with Accounting!
+                        Save time and money with Enty
+                    </p>
+                    <a class="header__button" href="#">Let’s start</a>
+                </div>
+                <div class="header__right">
+                    <img src="./assets/images/header/laptop.png" id="laptopHeader" alt="laptop">
+                </div>
+            </div>
+        </header>
+        <!-- Features section begin -->
+        <div class="features">
+            <div class="features__upload">
+                <h2 class="section-title">
+                    Upload the Documents <br>
+                    How You Want
+                </h2>
+                <p class="features__description">
+                    Mobile app, web app, designated email & more ways to upload documents.
+                    Once you do that, we will file reports on the behalf of your company
+                </p>
+                <img src="./assets/images/features/upload-file.png" alt="app-example">
+            </div>
+            <div>
+                <div class="features__reporting">
+                    <h2>
+                        All types of reporting
+                    </h2>
+                    <p class="features__description">
+                        Annual reports, VAT returns, OSS/IOSS declarations, TSDs, you name it.
+                        We can take care of all reports that exist in Estonia.
+                    </p>
+                    <img src="./assets/images/features/reports.png" alt="report documents">
+                </div>
+                <div class="features__accounting">
+                    <picture>
+                        <img src="./assets/images/features/boringJohn.png" alt="the man is writing something">
+                    </picture>
+                    <h2>
+                        Professional Accountant by your side
+                    </h2>
+                    <p class="features__description">
+                        You don’t need to know anything about accounting.
+                        Free consultations with professional accountants and constant support from your personal manager
+                    </p>
+                </div>
+            </div>
+            <div class="features__banking">
+                <h2 class="section-title">
+                    Unlimited Invoicing, Connection to Bank account, Multi-currency Accounting
+                </h2>
+                <p class="features__description">
+                    Will help you make accounting even easier. Spend less time and money on boring paperwork
+                </p>
+                <div class="banking__container_desktop">
+                    <div class="banking-radio">
+                        <div>
+                            <input type="radio" name="option" onclick="handleBankingClick(this);" id="bankingOption1" value="1"
+                                checked>
+                            <label for="bankingOption1">Connect your bank account</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="option" onclick="handleBankingClick(this);" id="bankingOption2"
+                                value="2">
+                            <label for="bankingOption2">Issue and send invoices to your clients</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="option" onclick="handleBankingClick(this);" id="bankingOption3"
+                                value="3">
+                            <label for="bankingOption3">Upload invoices for the period</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="option" onclick="handleBankingClick(this);" id="bankingOption4"
+                                value="4">
+                            <label for="bankingOption4">Our accountant will create and file the report</label>
+                        </div>
+                    </div>
+                    <img src="./assets/images/features/banking1.png" id="optionImage" alt="banking">
+                </div>
+                <div class="banking__container_mobile">
+                    <div class="slider-wrapper" data-items="1">
+                        <div class="slider">
+                            <div class="item">
+                                <p>Connect your bank account</p>
+                                <img src="./assets/images/features/banking-small-1.png" alt="slide 1">
+                            </div>
+                            <div class="item">
+                                <p>Issue and send invoices to your clients</p>
+                                <img src="./assets/images/features/banking-small-2.png" alt="slide 2">
+                            </div>
+                            <div class="item">
+                                <p>Upload invoices for the period</p>
+                                <img src="./assets/images/features/banking-small-3.png" alt="slide 3">
+                            </div>
+                            <div class="item">
+                                <p>Our accountant will create and file the report</p>
+                                <img src="./assets/images/features/banking-small-4.png" alt="slide 4">
+                            </div>
+                        </div>
+                        <div class="slider-buttons">
+                            <div class="prev">
+                                <svg width="22" height="16" viewBox="0 0 22 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7.66536 0.756458L1.02977 7.27564C0.622574 7.67569 0.622574 8.32429 1.02977 8.72434L7.66536 15.2435C8.07255 15.6436 8.73274 15.6436 9.13994 15.2435C9.54713 14.8435 9.54713 14.1949 9.13994 13.7948L4.28431 9.02438H21.2305V6.9756H4.28431L9.13994 2.20516C9.54713 1.80512 9.54713 1.15651 9.13994 0.756458C8.73274 0.356409 8.07255 0.356409 7.66536 0.756458Z"
+                                        fill="black" />
+                                </svg>
+                            </div>
+                            <div class="next">
+                                <svg width="22" height="16" viewBox="0 0 22 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.3346 0.756458L20.9702 7.27564C21.3774 7.67569 21.3774 8.32429 20.9702 8.72434L14.3346 15.2435C13.9274 15.6436 13.2673 15.6436 12.8601 15.2435C12.4529 14.8435 12.4529 14.1949 12.8601 13.7948L17.7157 9.02438H0.769531V6.9756H17.7157L12.8601 2.20516C12.4529 1.80512 12.4529 1.15651 12.8601 0.756458C13.2673 0.356409 13.9274 0.356409 14.3346 0.756458Z"
+                                        fill="black" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Features section end -->
+
+        <!-- Plans section begin -->
+        <div class="plans">
+            <h2 class="section-title">
+                We’ll help you choose <br>
+                the package that suits exactly <br>
+                what you need
+            </h2>
+            <div class="plans__container_desktop">
+                <div class="tax-types">
+                    <div class="tax-types__item">
+                        I have VAT Number
+                    </div>
+                    <div class="tax-types__item tax-types__item_active">
+                        No VAT Number
+                    </div>
+                    <div class="tax-types__item">
+                        E-commerce business
+                    </div>
+                    <div class="tax-types__item">
+                        I don’t know
+                    </div>
+                </div>
+                <div class="subscription-duration">
+                    <div class="subscription-duration__item subscription-duration__item_active">
+                        Bill Yearly -20%
+                    </div>
+                    <div class="subscription-duration__item">
+                        Bill Monthly
+                    </div>
+                </div>
+                <div class="plans-row">
+                    <div class="plans-card plans-card_active">
+                        <div>
+                            <h4 class="plans-card__title">Standart</h4>
+                            <span class="plans-card__price">€42 / month</span>
+                            <p class="plans-card__description">
+                                Covers the necessary accounting needs. Choose it if you don’t have VAT number and your
+                                workflow is small.
+                            </p>
+                            <div class="documents-info">
+                                <div class="documents-info__yearly">
+                                    <span>Documents yearly</span>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10 16.25C13.4518 16.25 16.25 13.4518 16.25 10C16.25 6.54822 13.4518 3.75 10 3.75C6.54822 3.75 3.75 6.54822 3.75 10C3.75 13.4518 6.54822 16.25 10 16.25ZM10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z"
+                                            fill="black" />
+                                        <path
+                                            d="M12.8125 8.13263C12.8125 6.84023 11.5262 6.25 10.144 6.25C8.39697 6.25 7.1875 7.16588 7.1875 8.77374H8.72334C8.72334 7.94946 9.31847 7.59328 10.1248 7.59328C10.7679 7.59328 11.1903 7.85787 11.1903 8.26493C11.1903 8.69233 10.4895 8.88569 10.0192 9.14009C9.36647 9.48609 8.86732 9.90332 8.86732 10.921C8.86732 11.0533 8.86732 11.267 8.89612 11.4094H10.4799V11.1448C10.4799 10.4936 10.8159 10.2799 11.4974 9.94403C12.2366 9.5675 12.8125 9.09939 12.8125 8.13263ZM8.79053 13.75H10.5759V11.9386H8.79053V13.75Z"
+                                            fill="black" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="documents-info__count documents-info__count_active">30</span>
+                                    <span class="documents-info__count">50</span>
+                                </div>
+                            </div>
+                            <div class="services-list">
+                                <div class="services-list__item">
+                                    <span>Annual report</span>
+                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur elit. 
+                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
+                                        ut posuere.
+                                    </p>
+                                </div>
+                                <div class="services-list__item">
+                                    <span>1 TSD each month</span>
+                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur elit. 
+                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
+                                        ut posuere.
+                                    </p>
+                                </div>
+                                <div class="services-list__item">
+                                    <span>
+                                        1-hour consultation <br>
+                                        with accountant per year
+                                    </span>
+                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur elit. 
+                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
+                                        ut posuere.
+                                    </p>
+                                </div>
+                                <div class="services-list__item">
+                                    <span>
+                                        5 more company <br>
+                                        management services
+                                    </span>
+                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur elit. 
+                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
+                                        ut posuere.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="plans-card__button plans-card__button_active">Choose plan</a>
+                    </div>
+                    <div class="plans-card">
+                        <div>
+                            <h4 class="plans-card__title">Pro</h4>
+                            <span class="plans-card__price">€85 / month</span>
+                            <p class="plans-card__description">
+                                For businesses with a moderate turnover and a VAT number
+                            </p>
+                            <div class="documents-info">
+                                <div class="documents-info__yearly">
+                                    <span>Documents yearly</span>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10 16.25C13.4518 16.25 16.25 13.4518 16.25 10C16.25 6.54822 13.4518 3.75 10 3.75C6.54822 3.75 3.75 6.54822 3.75 10C3.75 13.4518 6.54822 16.25 10 16.25ZM10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z"
+                                            fill="black" />
+                                        <path
+                                            d="M12.8125 8.13263C12.8125 6.84023 11.5262 6.25 10.144 6.25C8.39697 6.25 7.1875 7.16588 7.1875 8.77374H8.72334C8.72334 7.94946 9.31847 7.59328 10.1248 7.59328C10.7679 7.59328 11.1903 7.85787 11.1903 8.26493C11.1903 8.69233 10.4895 8.88569 10.0192 9.14009C9.36647 9.48609 8.86732 9.90332 8.86732 10.921C8.86732 11.0533 8.86732 11.267 8.89612 11.4094H10.4799V11.1448C10.4799 10.4936 10.8159 10.2799 11.4974 9.94403C12.2366 9.5675 12.8125 9.09939 12.8125 8.13263ZM8.79053 13.75H10.5759V11.9386H8.79053V13.75Z"
+                                            fill="black" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="documents-info__count documents-info__count_active">30</span>
+                                    <span class="documents-info__count">50</span>
+                                </div>
+                            </div>
+                            <div class="services-list">
+                                <div class="services-list__item">
+                                    <span>Annual report</span>
+                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur elit. 
+                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
+                                        ut posuere.
+                                    </p>
+                                </div>
+                                <div class="services-list__item">
+                                    <span>VAT return</span>
+                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur elit. 
+                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
+                                        ut posuere.
+                                    </p>
+                                </div>
+                                <div class="services-list__item">
+                                    <span>1 TSD each month</span>
+                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur elit. 
+                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
+                                        ut posuere.
+                                    </p>
+                                </div>
+                                <div class="services-list__item">
+                                    <span>
+                                        1-hour consultation <br>
+                                        with accountant per year
+                                    </span>
+                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur elit. 
+                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
+                                        ut posuere.
+                                    </p>
+                                </div>
+                                <div class="services-list__item">
+                                    <span>
+                                        5 more company <br>
+                                        management services
+                                    </span>
+                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur elit. 
+                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
+                                        ut posuere.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="plans-card__button">Choose plan</a>
+                    </div>
+                    <div class="plans-card">
+                        <div>
+                            <h4 class="plans-card__title">E-commerce</h4>
+                            <span class="plans-card__price">€85 / month</span>
+                            <p class="plans-card__description">
+                                Covers the necessary accounting needs for an E-commerce company.
+                            </p>
+                            <div class="documents-info">
+                                <div class="documents-info__yearly">
+                                    <span>Documents yearly</span>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10 16.25C13.4518 16.25 16.25 13.4518 16.25 10C16.25 6.54822 13.4518 3.75 10 3.75C6.54822 3.75 3.75 6.54822 3.75 10C3.75 13.4518 6.54822 16.25 10 16.25ZM10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z"
+                                            fill="black" />
+                                        <path
+                                            d="M12.8125 8.13263C12.8125 6.84023 11.5262 6.25 10.144 6.25C8.39697 6.25 7.1875 7.16588 7.1875 8.77374H8.72334C8.72334 7.94946 9.31847 7.59328 10.1248 7.59328C10.7679 7.59328 11.1903 7.85787 11.1903 8.26493C11.1903 8.69233 10.4895 8.88569 10.0192 9.14009C9.36647 9.48609 8.86732 9.90332 8.86732 10.921C8.86732 11.0533 8.86732 11.267 8.89612 11.4094H10.4799V11.1448C10.4799 10.4936 10.8159 10.2799 11.4974 9.94403C12.2366 9.5675 12.8125 9.09939 12.8125 8.13263ZM8.79053 13.75H10.5759V11.9386H8.79053V13.75Z"
+                                            fill="black" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="documents-info__count documents-info__count_active">30</span>
+                                    <span class="documents-info__count">50</span>
+                                </div>
+                            </div>
+                            <div class="services-list">
+                                <div class="services-list__item">
+                                    <span>Annual report</span>
+                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur elit. 
+                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
+                                        ut posuere.
+                                    </p>
+                                </div>
+                                <div class="services-list__item">
+                                    <span>VAT return</span>
+                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur elit. 
+                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
+                                        ut posuere.
+                                    </p>
+                                </div>
+                                <div class="services-list__item">
+                                    <span>1 TSD each month</span>
+                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur elit. 
+                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
+                                        ut posuere.
+                                    </p>
+                                </div>
+                                <div class="services-list__item">
+                                    <span>
+                                        1-hour consultation <br>
+                                        with accountant per year
+                                    </span>
+                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur elit. 
+                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
+                                        ut posuere.
+                                    </p>
+                                </div>
+                                <div class="services-list__item">
+                                    <span>
+                                        5 more company <br>
+                                        management services
+                                    </span>
+                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur elit. 
+                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
+                                        ut posuere.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="plans-card__button">Choose plan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="plans__container_mobile">
+                <div class="slider">
+                    <div class="item">
+
+                    </div>
+                    <div class="item">
+
+                    </div>
+                    <div class="item">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer></footer>
+    </div>
+
+    <script src="./assets/js/index.js"></script>
 </body>
+
 </html>
