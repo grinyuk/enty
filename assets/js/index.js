@@ -34,5 +34,44 @@ ELS(".slider-wrapper").forEach(EL_par => {
 
 function handleServiceClick(elem) {
     const target = elem.parentElement.querySelector("p");
+    const switcher = elem.querySelector(".services-list__description-swicher");
     target.style.display = target.style.display === "block" ? "none" : "block";
+    switcher.style.transform = switcher.style.transform === "rotate(45deg)" ? "rotate(0deg)" : "rotate(45deg)"; 
+}
+
+function choosePlanHendler(id, taxId = "") {
+    const planIds = ["standart", "pro", "e-commerce"];
+    taxId = taxId === "" ? `tax-${id}` : taxId;
+    let plan = document.getElementById(id);
+    let tax = document.getElementById(taxId);
+    tax.classList.add("tax-types__item_active");
+    plan.classList.add("plans-card_active");
+    plan.querySelector(".plans-card__button").classList.add("plans-card__button_active");
+
+    planIds.forEach(element => {
+        if (element !== id) {
+            plan = document.getElementById(element);
+            tax = document.getElementById(`tax-${element}`);
+            plan.classList.remove("plans-card_active");
+            plan.querySelector(".plans-card__button").classList.remove("plans-card__button_active");
+            tax.classList.remove("tax-types__item_active");
+            if (taxId !== "tax-idk" && taxId !== "") {
+                tax = document.getElementById('tax-idk');
+                tax.classList.remove("tax-types__item_active");
+            }
+        }
+    });
+}
+
+function handleDocumentsClick(elem, subs) {
+    if (elem.classList.contains("subscription-duration__item_active")) return;
+    elem.classList.add("subscription-duration__item_active");
+    if (subs === "yearly") {
+        document.getElementById("monthly").classList.remove("subscription-duration__item_active");
+    } else {
+        document.getElementById("yearly").classList.remove("subscription-duration__item_active")
+    }
+    document.querySelectorAll(".documents-info__count").forEach(item => {
+        item.classList.toggle("documents-info__count_active")
+    });
 }

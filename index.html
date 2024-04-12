@@ -179,29 +179,41 @@
             </h2>
             <div class="plans__container_desktop">
                 <div class="tax-types">
-                    <div class="tax-types__item">
+                    <div class="tax-types__item" id="tax-pro" onclick="choosePlanHendler('pro', this.id)">
                         I have VAT Number
                     </div>
-                    <div class="tax-types__item tax-types__item_active">
+                    <div 
+                        class="tax-types__item tax-types__item_active" 
+                        id="tax-standart" 
+                        onclick="choosePlanHendler('standart', this.id)"
+                    >
                         No VAT Number
                     </div>
-                    <div class="tax-types__item">
+                    <div class="tax-types__item" id="tax-e-commerce" onclick="choosePlanHendler('e-commerce', this.id)">
                         E-commerce business
                     </div>
-                    <div class="tax-types__item">
+                    <div class="tax-types__item" id="tax-idk" onclick="choosePlanHendler('standart', this.id)">
                         I don’t know
                     </div>
                 </div>
                 <div class="subscription-duration">
-                    <div class="subscription-duration__item subscription-duration__item_active">
+                    <div 
+                        class="subscription-duration__item subscription-duration__item_active" 
+                        onclick="handleDocumentsClick(this, this.id)"
+                        id="yearly"
+                    >
                         Bill Yearly -20%
                     </div>
-                    <div class="subscription-duration__item">
+                    <div 
+                        class="subscription-duration__item" 
+                        onclick="handleDocumentsClick(this, this.id)"
+                        id="monthly"
+                    >
                         Bill Monthly
                     </div>
                 </div>
                 <div class="plans-row">
-                    <div class="plans-card plans-card_active">
+                    <div class="plans-card plans-card_active" id="standart">
                         <div>
                             <h4 class="plans-card__title">Standart</h4>
                             <span class="plans-card__price">€42 / month</span>
@@ -229,8 +241,10 @@
                             </div>
                             <div class="services-list">
                                 <div class="services-list__item">
-                                    <span>Annual report</span>
-                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <div onclick="handleServiceClick(this)">
+                                        <span>Annual report</span>
+                                        <span class="services-list__description-swicher">+</span>
+                                    </div>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur elit. 
                                         Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
@@ -238,8 +252,24 @@
                                     </p>
                                 </div>
                                 <div class="services-list__item">
-                                    <span>1 TSD each month</span>
-                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <div onclick="handleServiceClick(this)">
+                                        <span>1 TSD each month</span>
+                                        <span class="services-list__description-swicher">+</span>
+                                    </div>
+                                        <p>
+                                        Lorem ipsum dolor sit amet, consectetur elit. 
+                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
+                                        ut posuere.
+                                    </p>
+                                </div>
+                                <div class="services-list__item">
+                                    <div onclick="handleServiceClick(this)">
+                                        <span>
+                                            1-hour consultation <br>
+                                            with accountant per year
+                                        </span>
+                                        <span class="services-list__description-swicher">+</span>
+                                    </div>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur elit. 
                                         Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
@@ -247,23 +277,13 @@
                                     </p>
                                 </div>
                                 <div class="services-list__item">
-                                    <span>
-                                        1-hour consultation <br>
-                                        with accountant per year
-                                    </span>
-                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur elit. 
-                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
-                                        ut posuere.
-                                    </p>
-                                </div>
-                                <div class="services-list__item">
-                                    <span>
-                                        5 more company <br>
-                                        management services
-                                    </span>
-                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <div onclick="handleServiceClick(this)">
+                                        <span>
+                                            5 more company <br>
+                                            management services
+                                        </span>
+                                        <span class="services-list__description-swicher">+</span>
+                                    </div>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur elit. 
                                         Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
@@ -272,9 +292,15 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="plans-card__button plans-card__button_active">Choose plan</a>
+                        <a 
+                            href="#/" 
+                            class="plans-card__button plans-card__button_active" 
+                            onclick="choosePlanHendler('standart')"
+                        >
+                            Choose plan
+                        </a>
                     </div>
-                    <div class="plans-card">
+                    <div class="plans-card" id="pro">
                         <div>
                             <h4 class="plans-card__title">Pro</h4>
                             <span class="plans-card__price">€85 / month</span>
@@ -301,8 +327,10 @@
                             </div>
                             <div class="services-list">
                                 <div class="services-list__item">
-                                    <span>Annual report</span>
-                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <div onclick="handleServiceClick(this)">
+                                        <span>Annual report</span>
+                                        <span class="services-list__description-swicher">+</span>
+                                    </div>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur elit. 
                                         Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
@@ -310,8 +338,21 @@
                                     </p>
                                 </div>
                                 <div class="services-list__item">
-                                    <span>VAT return</span>
-                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <div onclick="handleServiceClick(this)">
+                                        <span>VAT return</span>
+                                        <span class="services-list__description-swicher">+</span>
+                                    </div>
+                                        <p>
+                                        Lorem ipsum dolor sit amet, consectetur elit. 
+                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
+                                        ut posuere.
+                                    </p>
+                                </div>
+                                <div class="services-list__item">
+                                    <div onclick="handleServiceClick(this)">
+                                        <span>1 TSD each month</span>
+                                        <span class="services-list__description-swicher">+</span>
+                                    </div>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur elit. 
                                         Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
@@ -319,8 +360,13 @@
                                     </p>
                                 </div>
                                 <div class="services-list__item">
-                                    <span>1 TSD each month</span>
-                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <div onclick="handleServiceClick(this)">
+                                        <span>
+                                            1-hour consultation <br>
+                                            with accountant per year
+                                        </span>
+                                        <span class="services-list__description-swicher">+</span>
+                                    </div>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur elit. 
                                         Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
@@ -328,23 +374,13 @@
                                     </p>
                                 </div>
                                 <div class="services-list__item">
-                                    <span>
-                                        1-hour consultation <br>
-                                        with accountant per year
-                                    </span>
-                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur elit. 
-                                        Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
-                                        ut posuere.
-                                    </p>
-                                </div>
-                                <div class="services-list__item">
-                                    <span>
-                                        5 more company <br>
-                                        management services
-                                    </span>
-                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <div onclick="handleServiceClick(this)">
+                                        <span>
+                                            5 more company <br>
+                                            management services
+                                        </span>
+                                        <span class="services-list__description-swicher">+</span>
+                                    </div>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur elit. 
                                         Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
@@ -353,9 +389,9 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="plans-card__button">Choose plan</a>
+                        <a href="#/" class="plans-card__button" onclick="choosePlanHendler('pro')">Choose plan</a>
                     </div>
-                    <div class="plans-card">
+                    <div class="plans-card" id="e-commerce">
                         <div>
                             <h4 class="plans-card__title">E-commerce</h4>
                             <span class="plans-card__price">€85 / month</span>
@@ -382,8 +418,10 @@
                             </div>
                             <div class="services-list">
                                 <div class="services-list__item">
-                                    <span>Annual report</span>
-                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <div onclick="handleServiceClick(this)">
+                                        <span>Annual report</span>
+                                        <span class="services-list__description-swicher">+</span>
+                                    </div>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur elit. 
                                         Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
@@ -391,8 +429,10 @@
                                     </p>
                                 </div>
                                 <div class="services-list__item">
-                                    <span>VAT return</span>
-                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <div onclick="handleServiceClick(this)">
+                                        <span>VAT return</span>
+                                        <span class="services-list__description-swicher">+</span>
+                                    </div>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur elit. 
                                         Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
@@ -400,8 +440,10 @@
                                     </p>
                                 </div>
                                 <div class="services-list__item">
-                                    <span>1 TSD each month</span>
-                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <div onclick="handleServiceClick(this)">
+                                        <span>1 TSD each month</span>
+                                        <span class="services-list__description-swicher">+</span>
+                                    </div>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur elit. 
                                         Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
@@ -409,11 +451,13 @@
                                     </p>
                                 </div>
                                 <div class="services-list__item">
-                                    <span>
-                                        1-hour consultation <br>
-                                        with accountant per year
-                                    </span>
-                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <div onclick="handleServiceClick(this)">
+                                        <span>
+                                            1-hour consultation <br>
+                                            with accountant per year
+                                        </span>
+                                        <span class="services-list__description-swicher">+</span>
+                                    </div>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur elit. 
                                         Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
@@ -421,11 +465,13 @@
                                     </p>
                                 </div>
                                 <div class="services-list__item">
-                                    <span>
-                                        5 more company <br>
-                                        management services
-                                    </span>
-                                    <span class="services-list__description-swicher" onclick="handleServiceClick(this)">+</span>
+                                    <div onclick="handleServiceClick(this)">
+                                        <span>
+                                            5 more company <br>
+                                            management services
+                                        </span>
+                                        <span class="services-list__description-swicher">+</span>
+                                    </div>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur elit. 
                                         Vestibulum sollicitudin, lacus a rhoncus pulvinar, dui libero varius eros, 
@@ -434,7 +480,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="plans-card__button">Choose plan</a>
+                        <a href="#/" class="plans-card__button"  onclick="choosePlanHendler('e-commerce')">Choose plan</a>
                     </div>
                 </div>
             </div>

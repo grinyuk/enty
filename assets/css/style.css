@@ -486,10 +486,15 @@ a {
     padding: 5px 0;
 }
 
+.services-list__item>div {
+    cursor: pointer;
+}
+
 .services-list__description-swicher {
     position: absolute;
     top: 0;
     right: 0;
+    transition: transform .2s ease-in-out; 
 }
 
 .plans-card__button {
