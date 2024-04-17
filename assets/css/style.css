@@ -882,6 +882,73 @@ a {
         top: 40%;
     }
 
+    .plans__container_mobile>p {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: center;
+        padding: 24px 0 16px;
+    }
+
+    .select-tax {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 18px 0;
+        border-radius: 30px;
+        border: 1px solid #000;
+        min-height: 60px;
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+
+    .select-tax__item {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .select-tax__item:not(:first-child) {
+        display: none;
+    }
+
+    .select-tax__item_show {
+        display: block !important;
+    }
+
+    .subscription-duration {
+        margin-bottom: 45px;
+    }
+
+    .subscription-duration__item {
+        width: 175px;
+        height: 60px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    .plans-card {
+        width: 90%;
+        margin: 0 auto;
+        padding: 24px;
+        min-height: 100%;
+    }
+
+    .plans-card__button {
+        margin-top: 28px;
+    }
+    
+    .plans-card__description {
+        padding: 8px 0 24px;
+    }
+
+    .plans__container_mobile .slider-wrapper {
+        margin-left: -25px;
+        margin-right: -25px;
+    }
 }
 
 @media only screen and (min-width: 600px) {

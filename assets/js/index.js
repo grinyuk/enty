@@ -1,3 +1,11 @@
+const isMobile = window.innerWidth < 600;
+
+if (isMobile) {
+    document.getElementsByClassName("plans__container_desktop")[0].remove();
+} else {
+    document.getElementsByClassName("plans__container_mobile")[0].remove();
+}
+
 function myFunction() {
     var x = document.getElementById("myNav");
     if (x.className === "nav") {
@@ -44,7 +52,15 @@ function choosePlanHendler(id, taxId = "") {
     taxId = taxId === "" ? `tax-${id}` : taxId;
     let plan = document.getElementById(id);
     let tax = document.getElementById(taxId);
-    tax.classList.add("tax-types__item_active");
+    if (!isMobile) {
+        tax.classList.add("tax-types__item_active");
+    } else {
+        document.querySelector("#selected span").innerHTML = tax.innerHTML;
+        document.querySelectorAll(".select-tax__item:not(#selected)").forEach(item => {
+            item.classList.remove("select-tax__item_show"); 
+        });
+        document.querySelector(".plans__container_mobile .slider").style.transform = `translateX(-${tax.dataset.slideNumber*100}%)`;
+    }
     plan.classList.add("plans-card_active");
     plan.querySelector(".plans-card__button").classList.add("plans-card__button_active");
 
@@ -54,10 +70,14 @@ function choosePlanHendler(id, taxId = "") {
             tax = document.getElementById(`tax-${element}`);
             plan.classList.remove("plans-card_active");
             plan.querySelector(".plans-card__button").classList.remove("plans-card__button_active");
-            tax.classList.remove("tax-types__item_active");
-            if (taxId !== "tax-idk" && taxId !== "") {
-                tax = document.getElementById('tax-idk');
+            if (!isMobile) {
                 tax.classList.remove("tax-types__item_active");
+                if (taxId !== "tax-idk" && taxId !== "") {
+                    tax = document.getElementById('tax-idk');
+                    tax.classList.remove("tax-types__item_active");
+                }
+            } else {
+                // todo
             }
         }
     });
@@ -68,10 +88,23 @@ function handleDocumentsClick(elem, subs) {
     elem.classList.add("subscription-duration__item_active");
     if (subs === "yearly") {
         document.getElementById("monthly").classList.remove("subscription-duration__item_active");
-    } else {
-        document.getElementById("yearly").classList.remove("subscription-duration__item_active")
+    } else if (subs === "monthly") {
+        document.getElementById("yearly").classList.remove("subscription-duration__item_active");
     }
+    if (subs === "yearly2") {
+        document.getElementById("monthly2").classList.remove("subscription-duration__item_active");
+    } else if (subs === "monthly2") {
+        document.getElementById("yearly2").classList.remove("subscription-duration__item_active");
+    }
+
     document.querySelectorAll(".documents-info__count").forEach(item => {
-        item.classList.toggle("documents-info__count_active")
+        item.classList.toggle("documents-info__count_active");
     });
 }
+
+function handleSelectClick() {
+    document.querySelectorAll(".select-tax__item:not(#selected)").forEach(item => {
+        item.classList.toggle("select-tax__item_show"); 
+    });
+}
+
