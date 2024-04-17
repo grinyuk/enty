@@ -59,7 +59,10 @@ function choosePlanHendler(id, taxId = "") {
         document.querySelectorAll(".select-tax__item:not(#selected)").forEach(item => {
             item.classList.remove("select-tax__item_show"); 
         });
-        document.querySelector(".plans__container_mobile .slider").style.transform = `translateX(-${tax.dataset.slideNumber*100}%)`;
+        document.querySelector(".plans__container_mobile .slider")
+            .style.transform = `translateX(-${tax.dataset.slideNumber*100}%)`;    
+        const svg = document.querySelector("#selected svg");
+        svg.style.transform = svg.style.transform === "rotate(180deg)" ? "rotate(0)" : "rotate(180deg)";
     }
     plan.classList.add("plans-card_active");
     plan.querySelector(".plans-card__button").classList.add("plans-card__button_active");
@@ -106,5 +109,7 @@ function handleSelectClick() {
     document.querySelectorAll(".select-tax__item:not(#selected)").forEach(item => {
         item.classList.toggle("select-tax__item_show"); 
     });
+    const svg = document.querySelector("#selected svg");
+    svg.style.transform = svg.style.transform === "rotate(180deg)" ? "rotate(0)" : "rotate(180deg)";
 }
 
