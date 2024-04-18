@@ -112,4 +112,3 @@ function handleSelectClick() {
     const svg = document.querySelector("#selected svg");
     svg.style.transform = svg.style.transform === "rotate(180deg)" ? "rotate(0)" : "rotate(180deg)";
 }
-

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Accounting for Estonian Company</title>
 </head>
@@ -481,16 +482,20 @@
                             <path d="M1 1L7 7L13 1" stroke="black" />
                         </svg>
                     </div>
-                    <div class="select-tax__item" id="tax-pro" data-slide-number="1" onclick="choosePlanHendler('pro', this.id)">
+                    <div class="select-tax__item" id="tax-pro" data-slide-number="1"
+                        onclick="choosePlanHendler('pro', this.id)">
                         I have VAT Number
                     </div>
-                    <div class="select-tax__item" id="tax-standart" data-slide-number="0" onclick="choosePlanHendler('standart', this.id)">
+                    <div class="select-tax__item" id="tax-standart" data-slide-number="0"
+                        onclick="choosePlanHendler('standart', this.id)">
                         No VAT Number
                     </div>
-                    <div class="select-tax__item" id="tax-e-commerce" data-slide-number="2" onclick="choosePlanHendler('e-commerce', this.id)">
+                    <div class="select-tax__item" id="tax-e-commerce" data-slide-number="2"
+                        onclick="choosePlanHendler('e-commerce', this.id)">
                         E-commerce business
                     </div>
-                    <div class="select-tax__item" id="tax-idk" data-slide-number="0" onclick="choosePlanHendler('standart', this.id)">
+                    <div class="select-tax__item" id="tax-idk" data-slide-number="0"
+                        onclick="choosePlanHendler('standart', this.id)">
                         I don’t know
                     </div>
                 </div>
@@ -500,7 +505,8 @@
                         onclick="handleDocumentsClick(this, this.id)" id="yearly2">
                         Bill yearly -20%
                     </div>
-                    <div class="subscription-duration__item" onclick="handleDocumentsClick(this, this.id)" id="monthly2">
+                    <div class="subscription-duration__item" onclick="handleDocumentsClick(this, this.id)"
+                        id="monthly2">
                         Bill monthly
                     </div>
                 </div>
@@ -817,24 +823,7 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <div class="extra-services">
                 <h4>Some of the services cost extra</h4>
                 <div>
@@ -853,14 +842,98 @@
                     <span>Any other report: upon request</span>
                 </div>
             </div>
-
             <div class="help">
                 <h3>Describe your case and we will help you personally</h3>
                 <a href="#/">Help me</a>
             </div>
         </div>
 
-        <footer></footer>
+        <div class="tools">
+            <h2 class="section-title">Even more tools to manage company in one subscription</h2>
+            <div class="tools__container_desktop">
+                <div class="tools__row">
+                    <div class="tools__item">
+                        <h3>
+                            Create contracts within minutes
+                        </h3>
+                        <picture>
+                            <img src="./assets/images/tools/papers.png" alt="papers">
+                        </picture>
+                    </div>
+                    <div class="tools__item">
+                        <h3>
+                            Hire contractors and employees
+                        </h3>
+                        <picture>
+                            <img src="./assets/images/tools/calculator.png" alt="calculator">
+                        </picture>
+                    </div>
+                    <div class="tools__item">
+                        <h3>
+                            Perform corporate tasks
+                        </h3>
+                        <picture>
+                            <img src="./assets/images/tools/multitool.png" alt="multitool">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="tools__container_mobile">
+                <div class="slider-wrapper" data-items="1">
+                    <div class="slider">
+                        <div class="item">
+                            <div class="tools__item">
+                                <h3>
+                                    Create contracts within minutes
+                                </h3>
+                                <picture>
+                                    <img src="./assets/images/tools/papers.png" alt="papers">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="tools__item">
+                                <h3>
+                                    Hire contractors and employees
+                                </h3>
+                                <picture>
+                                    <img src="./assets/images/tools/calculator.png" alt="calculator">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="tools__item">
+                                <h3>
+                                    Perform corporate tasks
+                                </h3>
+                                <picture>
+                                    <img src="./assets/images/tools/multitool.png" alt="multitool">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-buttons">
+                        <div class="prev">
+                            <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7.66536 0.756458L1.02977 7.27564C0.622574 7.67569 0.622574 8.32429 1.02977 8.72434L7.66536 15.2435C8.07255 15.6436 8.73274 15.6436 9.13994 15.2435C9.54713 14.8435 9.54713 14.1949 9.13994 13.7948L4.28431 9.02438H21.2305V6.9756H4.28431L9.13994 2.20516C9.54713 1.80512 9.54713 1.15651 9.13994 0.756458C8.73274 0.356409 8.07255 0.356409 7.66536 0.756458Z"
+                                    fill="black" />
+                            </svg>
+                        </div>
+                        <div class="next">
+                            <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.3346 0.756458L20.9702 7.27564C21.3774 7.67569 21.3774 8.32429 20.9702 8.72434L14.3346 15.2435C13.9274 15.6436 13.2673 15.6436 12.8601 15.2435C12.4529 14.8435 12.4529 14.1949 12.8601 13.7948L17.7157 9.02438H0.769531V6.9756H17.7157L12.8601 2.20516C12.4529 1.80512 12.4529 1.15651 12.8601 0.756458C13.2673 0.356409 13.9274 0.356409 14.3346 0.756458Z"
+                                    fill="black" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+        </footer>
     </div>
 
     <script src="./assets/js/index.js"></script>

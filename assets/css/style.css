@@ -581,6 +581,69 @@ a {
     text-align: center;
 }
 
+.tools {
+    margin-top: 180px;
+}
+
+.tools .section-title {
+    color: #fff;
+    margin-bottom: 48px;
+}
+
+.tools__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tools__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 32px;
+    height: 600px;
+    width: 400px;
+    padding: 40px;
+    transition: transform .2s ease-in-out; 
+}
+
+.tools__item:hover {
+    transform: translateY(-20px);
+}
+
+.tools__item:nth-child(1),
+.item:nth-child(1) .tools__item {
+    background-image: url("../images/tools/background1.png");
+}
+
+.tools__item:nth-child(2),
+.item:nth-child(2) .tools__item {
+    background-image: url("../images/tools/background2.png");
+}
+
+.tools__item:nth-child(3),
+.item:nth-child(3) .tools__item {
+    background-image: url("../images/tools/background3.png");
+}
+
+.tools__item h3 {
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64px;
+    text-align: left;
+}
+
+.tools__item img {
+    display: block;
+    float: right;
+}
+
+.tools__item:nth-child(2) img {
+    border-radius: 24px;
+    box-shadow: 0px 0px 36.64px 0px #0000003D;
+}
+
+
+
 
 /* Media queries */
 @media screen and (max-width: 600px) {
@@ -798,6 +861,10 @@ a {
         display: none;
     }
 
+    .tools__container_desktop {
+        display: none;
+    }
+
     .banking__container_mobile .item {
         padding: 0;
         align-items: center;
@@ -949,6 +1016,38 @@ a {
         margin-left: -25px;
         margin-right: -25px;
     }
+
+    .tools {
+        margin-top: 120px;
+    }
+
+    .tools .prev,
+    .tools .next {
+        background-color: #ffffff40;
+    }
+
+    .tools__item {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .tools__container_mobile .tools__item {
+        transform: none;
+    }
+
+    .tools__container_mobile .slider-wrapper {
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+
+    .tools__container_mobile .slider-buttons {
+        margin-top: 32px;
+    }
+
+    .tools .next:hover,
+    .tools .prev:hover {
+        background-color: #fff;
+    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -1000,6 +1099,9 @@ a {
     }
     
     .plans__container_mobile {
+        display: none;
+    }
+    .tools__container_mobile {
         display: none;
     }
 }
