@@ -2,6 +2,8 @@ const isMobile = window.innerWidth < 600;
 
 if (isMobile) {
     document.getElementsByClassName("plans__container_desktop")[0].remove();
+    document.querySelector(".client-reviews .slider-wrapper").setAttribute("data-items", "1");
+    document.querySelector(".client-reviews .slider-wrapper").setAttribute("data-step", "100");
 } else {
     document.getElementsByClassName("plans__container_mobile")[0].remove();
 }
@@ -28,10 +30,11 @@ ELS(".slider-wrapper").forEach(EL_par => {
   const EL_slider = EL(".slider", EL_par);
   const ELS_items = ELS(".item", EL_par);
   const sub = +EL_par.dataset.items ?? 1;
-  const tot = Math.ceil(ELS_items.length / sub);
+  const step = +EL_par.dataset.step || 100;
+  const tot = Math.ceil(ELS_items.length / sub) + (step == 50 ? 1 : 0);
   let c = 0;
   
-  const anim = () => EL_slider.style.transform = `translateX(-${c*100}%)`;
+  const anim = () => EL_slider.style.transform = `translateX(-${c*step}%)`;
   const prev = () => (c = mod(c-1, tot), anim());
   const next = () => (c = mod(c+1, tot), anim());
   
