@@ -51,7 +51,7 @@
                         Don’t sweat yourself with Accounting!
                         Save time and money with Enty
                     </p>
-                    <a class="header__button" href="#">Let’s start</a>
+                    <a class="header__button hover-button" href="#">Let’s start</a>
                 </div>
                 <div class="header__right">
                     <img src="./assets/images/header/laptop.png" id="laptopHeader" alt="laptop">
@@ -844,7 +844,7 @@
             </div>
             <div class="help">
                 <h3>Describe your case and we will help you personally</h3>
-                <a href="#/">Help me</a>
+                <a class="hover-button" href="#/">Help me</a>
             </div>
         </div>
 
@@ -1039,17 +1039,197 @@
                     </div>
                 </div>
             </div>
-
             <div class="enty-hub">
                 <p class="enty-hub__title">
                     Find more clients on <strong>Enty Hub</strong>
                 </p>
-                <a href="#/" class="enty-hub__button">explore Enty Hub</a>
+                <a href="#/" class="enty-hub__button hover-button">explore Enty Hub</a>
             </div>
         </div>
 
+        <div class="questions">
+            <h2 class="section-title">Have a question?</h2>
+            <div class="questions__column">
+                <div class="questions__item">
+                    <div class="questions__header" onclick="handleQuestionClick(this)">
+                        <span class="questions__title">
+                            How much does it cost to open and manage a company in Estonia?
+                        </span>
+                        <span class="questions__switcher">
+                            <img src="./assets/images/questions/show.png" alt="show/hide answer icon">                            
+                        </span>
+                    </div>
+                    <p class="questions__answer">
+                        Opening a company in Estonia with Enty costs <strong>€350</strong> with e-Residency and 
+                        <strong>€790</strong> through a notary (the gov fee of €290 is included in both prices). 
+                        Please notice that the issuance of an e-Residency card itself costs €120 
+                        (charged by the Estonian government).
+                        <br>
+                        <br>
+                        Assistance with bank account opening is included in our subscriptions. 
+                        However, some banks might charge you extra (from €0 to €100) for the processing 
+                        of your application. At the same time, please keep in mind that some corporate 
+                        services from the side of the government might require gov fees. That’s all for 
+                        the one-time costs for company opening.
+                        <br>
+                        <br>
+                        There are also recurring costs — firstly, each company is required to have a legal 
+                        address and a contact person in Estonia (both are included in our subscriptions).
+                        Other recurring costs are quite individual.
+                        <br>
+                        <br>
+                        Enty allows you to take care of accounting, invoicing, and other corporate issues. 
+                        Our subscriptions start from just €25.
+                        Let’s try Enty! Also, explore our article about the costs of running a company in Estonia.
+                    </p>
+                </div>
+                <div class="questions__item">
+                    <div class="questions__header" onclick="handleQuestionClick(this)">
+                        <span class="questions__title">
+                            When do I become required to pay the share capital?
+                            Can it be spent on my operational expenses?
+                        </span>
+                        <span class="questions__switcher">
+                            <img src="./assets/images/questions/show.png" alt="show/hide answer icon">                            
+                        </span>
+                    </div>
+                    <p class="questions__answer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Donec mattis enim auctor arcu dignissim varius. Morbi luctus justo non mattis pharetra. 
+                        Donec sodales massa at ex imperdiet semper. Cras semper velit sed felis convallis sollicitudin. 
+                        Nulla vitae tristique nunc. Phasellus at elit viverra, malesuada est in, ullamcorper mauris. 
+                        In vehicula erat vel ipsum aliquet porta. Fusce tincidunt vestibulum metus, 
+                        non tincidunt augue consequat sit amet. Curabitur non erat molestie dui varius sagittis. 
+                        Phasellus elit augue, consequat id elit a, rutrum bibendum mi. 
+                        In pulvinar mauris id vehicula dignissim. Curabitur feugiat, tortor id tempus consectetur, 
+                        erat metus accumsan libero, non interdum dolor ligula ac tellus. Nulla et purus vestibulum, 
+                        gravida orci in, sodales libero. Suspendisse ipsum lorem, malesuada non vehicula vitae, 
+                        accumsan at massa. Sed et neque odio.
+                    </p>
+                </div>
+                <div class="questions__item">
+                    <div class="questions__header" onclick="handleQuestionClick(this)">
+                        <span class="questions__title">
+                            Can I use the existing bank account for my new company?
+                        </span>
+                        <span class="questions__switcher">
+                            <img src="./assets/images/questions/show.png" alt="show/hide answer icon">                            
+                        </span>
+                    </div>
+                    <p class="questions__answer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Donec mattis enim auctor arcu dignissim varius. Morbi luctus justo non mattis pharetra. 
+                        Donec sodales massa at ex imperdiet semper. Cras semper velit sed felis convallis sollicitudin. 
+                        Nulla vitae tristique nunc. Phasellus at elit viverra, malesuada est in, ullamcorper mauris. 
+                        In vehicula erat vel ipsum aliquet porta. Fusce tincidunt vestibulum metus, 
+                        non tincidunt augue consequat sit amet. Curabitur non erat molestie dui varius sagittis. 
+                        Phasellus elit augue, consequat id elit a, rutrum bibendum mi. 
+                        In pulvinar mauris id vehicula dignissim. Curabitur feugiat, tortor id tempus consectetur, 
+                        erat metus accumsan libero, non interdum dolor ligula ac tellus. Nulla et purus vestibulum, 
+                        gravida orci in, sodales libero. Suspendisse ipsum lorem, malesuada non vehicula vitae, 
+                        accumsan at massa. Sed et neque odio.
+                    </p>
+                </div>
+                <div class="questions__item">
+                    <div class="questions__header" onclick="handleQuestionClick(this)">
+                        <span class="questions__title">
+                            Can a foreigner open a company in Estonia?
+                        </span>
+                        <span class="questions__switcher">
+                            <img src="./assets/images/questions/show.png" alt="show/hide answer icon">                            
+                        </span>
+                    </div>
+                    <p class="questions__answer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Donec mattis enim auctor arcu dignissim varius. Morbi luctus justo non mattis pharetra. 
+                        Donec sodales massa at ex imperdiet semper. Cras semper velit sed felis convallis sollicitudin. 
+                        Nulla vitae tristique nunc. Phasellus at elit viverra, malesuada est in, ullamcorper mauris. 
+                        In vehicula erat vel ipsum aliquet porta. Fusce tincidunt vestibulum metus, 
+                        non tincidunt augue consequat sit amet. Curabitur non erat molestie dui varius sagittis. 
+                        Phasellus elit augue, consequat id elit a, rutrum bibendum mi. 
+                        In pulvinar mauris id vehicula dignissim. Curabitur feugiat, tortor id tempus consectetur, 
+                        erat metus accumsan libero, non interdum dolor ligula ac tellus. Nulla et purus vestibulum, 
+                        gravida orci in, sodales libero. Suspendisse ipsum lorem, malesuada non vehicula vitae, 
+                        accumsan at massa. Sed et neque odio.
+                    </p>
+                </div>
+                <div class="questions__item">
+                    <a href="#/" class="questions__title">Didn’t find an answer? Ask us directly</a>
+                </div>
+            </div>
+        </div>
         
-        <footer>
+        <div class="more">
+            <h2 class="section-title">Read more about accounting and related products</h2>
+            <div class="more__group">
+                <div class="more__item">
+                    <img src="./assets/images/more/card1.png" alt="">
+                </div>
+                <div class="more__item">
+                    <img src="./assets/images/more/card2.png" alt="">
+                </div>
+                <div class="more__item">
+                    <img src="./assets/images/more/card3.png" alt="">
+                </div>
+                <div class="more__item">
+                    <img src="./assets/images/more/card4.png" alt="">
+                </div>
+            </div>
+            <div class="subscribe">
+                <h3 class="subscribe__title">Don’t miss our product updates by subscribing to our newsletter</h3>
+                <div class="subscribe__wrapper">
+                    <input class="subscribe__input" type="text" name="" id="" placeholder="your email">
+                    <a class="subscribe__button hover-button" href="#/">subscribe</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="start-bottom">
+            <h2 class="section-title">Simplify your accounting today</h2>
+            <a href="#/" class="start-bottom__button hover-button">Let’s start</a>
+        </div>
+        <footer class="footer">
+            <div class="footer__item">
+                <img src="./assets/images/logo/logo.png" alt="footer logo">
+            </div>
+            <div class="footer__item">
+                <h4>Services</h4>
+                <a href="#/" class="footer-text">Incorporation EU</a>
+                <a href="#/" class="footer-text">Incorporation Estonia</a>
+            </div>
+            <div class="footer__item footer__item_only-mobile">
+                <h4>Explore</h4>
+                <a href="#/" class="footer-text">Pricing</a>
+                <a href="#/" class="footer-text">Blog</a>
+                <a href="#/" class="footer-text">Press kit</a>
+            </div>
+            <div class="footer__item">
+                <h4>Legal Info</h4>
+                <a href="#/" class="footer-text">Cookies Notice</a>
+                <a href="#/" class="footer-text">Privacy Policy</a>
+                <a href="#/" class="footer-text">Terms</a>
+            </div>
+            <div class="footer__item">
+                <h4>Contact Us</h4>
+                <a href="#/" class="footer-text">Facebook</a>
+                <a href="mailto:support@enty.io" class="footer-text">support@enty.io</a>
+                <a href="tel:+79261581153" class="footer-text">+7 926 158-11-53</a>
+            </div>
+            <div class="footer__item">
+                <p class="footer-text">
+                    14772172 Tornimäe tn 5, 10145,
+                    Tallinn, Harju maakond Register №16080939
+                </p>
+                <p class="footer-text">
+                    Developed with ❤️ by Entytech OÜ and
+                     Digirepresent Services OÜ (license № FIU000382)
+                </p>
+                <div>
+                    <p class="footer-text">We accept</p>
+                    <img src="./assets/images/logo/visa.png" alt="visa">
+                    <img src="./assets/images/logo/mastercard.png" alt="mastercard">
+                </div>
+            </div>
         </footer>
     </div>
 

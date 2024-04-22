@@ -115,3 +115,10 @@ function handleSelectClick() {
     const svg = document.querySelector("#selected svg");
     svg.style.transform = svg.style.transform === "rotate(180deg)" ? "rotate(0)" : "rotate(180deg)";
 }
+
+function handleQuestionClick(elem) {
+    const target = elem.parentElement.getElementsByClassName("questions__answer")[0];
+    const switcher = elem.querySelector(".questions__switcher img");
+    target.style.display = target.style.display === "block" ? "none" : "block";
+    switcher.src =  switcher.src.includes("show") ? "./assets/images/questions/hide.png" : "./assets/images/questions/show.png"; 
+}
