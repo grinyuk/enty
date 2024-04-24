@@ -7,40 +7,19 @@
     0% {
         display: none;
         opacity: 0;
-        height: 0;
+        max-height: 0;
     }
 
     1% {
         display: block;
         opacity: 0;
-        height: 0;
+        max-height: 0;
     }
 
     100% {
         display: block;
-        height: 25px;
+        max-height: 700px;
         opacity: 1;
-    }
-}
-
-
-@keyframes fadeInToNone {
-    0% {
-        display: block;
-        opacity: 1;
-        height: 25px;
-    }
-
-    99% {
-        display: block;
-        opacity: 0.1;
-        height: 1px;
-    }
-
-    100% {
-        display: none;
-        opacity: 0;
-        height: 0;
     }
 }
 
@@ -85,17 +64,35 @@ a {
 
 .nav>.nav-links>a {
     display: inline-block;
-    padding: 13px 10px 13px 10px;
+    padding: 0 10px 0 10px;
     text-decoration: none;
-    color: #efefef;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
 }
 
-.nav>.nav-links>a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+.nav>.nav-links>a:not(:last-child) {
+    border-bottom: 1px solid transparent;
+}
+
+.nav>.nav-links>a:not(:last-child):hover {
+    border-bottom: 1px solid #fff;
 }
 
 .nav>#nav-check {
     display: none;
+}
+
+.nav-links a:last-child {
+    color: #000;
+    background-color: #fff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    padding: 5px 15px;
 }
 
 .header__title {
@@ -524,6 +521,7 @@ a {
     color: #000000A3;
     width: 90%;
     padding: 5px 0;
+    animation: fadeInFromNone 1s;
 }
 
 .services-list__item>div {
@@ -822,6 +820,7 @@ a {
     line-height: 32px;
     text-align: left;
     width: 700px;
+    animation: fadeInFromNone .5s;
 }
 
 .questions__answer strong {
@@ -1058,7 +1057,7 @@ a {
     .nav>.nav-links>a {
         display: block;
         width: 100%;
-        padding-left: 20px;
+        padding: 7px 10px 7px 20px;
     }
 
     .nav>#nav-check:not(:checked)~.nav-links {
@@ -1069,6 +1068,12 @@ a {
         z-index: 5;
         height: calc(100vh - 50px);
         overflow-y: auto;
+    }
+
+    .nav-links a:last-child {
+        text-align: left;
+        border-radius: 0;
+        background: linear-gradient(90deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 90%);
     }
 
     body:has(#nav-check:checked) {
