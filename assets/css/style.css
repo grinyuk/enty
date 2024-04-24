@@ -1075,7 +1075,8 @@ a {
         border-radius: 0;
         background: linear-gradient(90deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 90%);
     }
-
+    
+    body:has(#nav-check:checked),
     html:has(#nav-check:checked) {
         overflow-y: hidden;
     }
