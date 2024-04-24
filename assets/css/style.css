@@ -1075,7 +1075,7 @@ a {
         border-radius: 0;
         background: linear-gradient(90deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 90%);
     }
-    
+
     body:has(#nav-check:checked),
     html:has(#nav-check:checked) {
         overflow-y: hidden;
@@ -1374,11 +1374,12 @@ a {
     }
 
     .subscription-duration {
+        width: 100%;
         margin-bottom: 45px;
     }
 
     .subscription-duration__item {
-        width: 175px;
+        width: 50%;
         height: 60px;
         font-size: 16px;
         font-weight: 400;
