@@ -12,38 +12,31 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="navbar">
-                <div>
-                    <img src="./assets/images/logo/logo.png" class="navbar__logo" alt="logo">
+            <nav>
+                <div class="nav">
+                    <input type="checkbox" id="nav-check">
+                    <div class="nav-header">
+                        <div class="nav-logo">
+                            <img src="./assets/images/logo/logo.png" class="navbar__logo" alt="logo">
+                        </div>
+                    </div>
+                    <div class="nav-btn">
+                        <label for="nav-check">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="nav-links">
+                        <a href="#/">Control Panel</a>
+                        <a href="#/">Incorporation</a>
+                        <a href="#/">Accounting</a>
+                        <a href="#/">Pricing</a>
+                        <a href="#/">Explore</a>
+                    </div>
                 </div>
-                <nav>
-                    <ul class="nav" id="myNav">
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Control panel</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Incorporation</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Accounting</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">Explore</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link nav-button" href="#">Get started</a>
-                        </li>
-                        <li class="icon">
-                            <a href="javascript:void(0);" onclick="myFunction()">
-                                <img src="./assets//images/header/union.png" alt="burger-menu icon">
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            </nav>
             <div class="header__content">
                 <div class="header__left">
                     <h1 class="header__title">Accounting for Estonian Company</h1>
@@ -955,15 +948,16 @@
                         <div class="item">
                             <div class="client-reviews__item">
                                 <div class="client-reviews__header">
-                                    <img src="./assets/images/trust/client-avatars/Loredana_and_Leonardo.png" alt="avatar">
+                                    <img src="./assets/images/trust/client-avatars/Loredana_and_Leonardo.png"
+                                        alt="avatar">
                                     <div>
                                         <span class="client-reviews__name">Loredana and Leonardo</span>
                                         <strong class="client-reviews__description">Concorsi Militari Academy</strong>
                                     </div>
                                 </div>
                                 <p class="client-reviews__comment">
-                                    We have considered other providers, but you were the first one to reply. 
-                                    Information on the website and email were well-structured, clear, and easy 
+                                    We have considered other providers, but you were the first one to reply.
+                                    Information on the website and email were well-structured, clear, and easy
                                     to understand. Client manager Alina was passionate, super helpful, and caring
                                 </p>
                             </div>
@@ -978,9 +972,9 @@
                                     </div>
                                 </div>
                                 <p class="client-reviews__comment">
-                                    Enty has a cool user interface and the incorporation process is very smooth. 
-                                    Also, everything is clear with the design and the website: it leads you through 
-                                    each process, like step-by-step, and you always know what to do next. 
+                                    Enty has a cool user interface and the incorporation process is very smooth.
+                                    Also, everything is clear with the design and the website: it leads you through
+                                    each process, like step-by-step, and you always know what to do next.
                                     Managers helped me with the registration website that was fully in Estonian.
                                 </p>
                             </div>
@@ -988,15 +982,16 @@
                         <div class="item">
                             <div class="client-reviews__item">
                                 <div class="client-reviews__header">
-                                    <img src="./assets/images/trust/client-avatars/Loredana_and_Leonardo.png" alt="avatar">
+                                    <img src="./assets/images/trust/client-avatars/Loredana_and_Leonardo.png"
+                                        alt="avatar">
                                     <div>
                                         <span class="client-reviews__name">Loredana and Leonardo</span>
                                         <strong class="client-reviews__description">Concorsi Militari Academy</strong>
                                     </div>
                                 </div>
                                 <p class="client-reviews__comment">
-                                    We have considered other providers, but you were the first one to reply. 
-                                    Information on the website and email were well-structured, clear, and easy 
+                                    We have considered other providers, but you were the first one to reply.
+                                    Information on the website and email were well-structured, clear, and easy
                                     to understand. Client manager Alina was passionate, super helpful, and caring
                                 </p>
                             </div>
@@ -1011,9 +1006,9 @@
                                     </div>
                                 </div>
                                 <p class="client-reviews__comment">
-                                    Enty has a cool user interface and the incorporation process is very smooth. 
-                                    Also, everything is clear with the design and the website: it leads you through 
-                                    each process, like step-by-step, and you always know what to do next. 
+                                    Enty has a cool user interface and the incorporation process is very smooth.
+                                    Also, everything is clear with the design and the website: it leads you through
+                                    each process, like step-by-step, and you always know what to do next.
                                     Managers helped me with the registration website that was fully in Estonian.
                                 </p>
                             </div>
@@ -1056,29 +1051,29 @@
                             How much does it cost to open and manage a company in Estonia?
                         </span>
                         <span class="questions__switcher">
-                            <img src="./assets/images/questions/show.png" alt="show/hide answer icon">                            
+                            <img src="./assets/images/questions/show.png" alt="show/hide answer icon">
                         </span>
                     </div>
                     <p class="questions__answer">
-                        Opening a company in Estonia with Enty costs <strong>€350</strong> with e-Residency and 
-                        <strong>€790</strong> through a notary (the gov fee of €290 is included in both prices). 
-                        Please notice that the issuance of an e-Residency card itself costs €120 
+                        Opening a company in Estonia with Enty costs <strong>€350</strong> with e-Residency and
+                        <strong>€790</strong> through a notary (the gov fee of €290 is included in both prices).
+                        Please notice that the issuance of an e-Residency card itself costs €120
                         (charged by the Estonian government).
                         <br>
                         <br>
-                        Assistance with bank account opening is included in our subscriptions. 
-                        However, some banks might charge you extra (from €0 to €100) for the processing 
-                        of your application. At the same time, please keep in mind that some corporate 
-                        services from the side of the government might require gov fees. That’s all for 
+                        Assistance with bank account opening is included in our subscriptions.
+                        However, some banks might charge you extra (from €0 to €100) for the processing
+                        of your application. At the same time, please keep in mind that some corporate
+                        services from the side of the government might require gov fees. That’s all for
                         the one-time costs for company opening.
                         <br>
                         <br>
-                        There are also recurring costs — firstly, each company is required to have a legal 
+                        There are also recurring costs — firstly, each company is required to have a legal
                         address and a contact person in Estonia (both are included in our subscriptions).
                         Other recurring costs are quite individual.
                         <br>
                         <br>
-                        Enty allows you to take care of accounting, invoicing, and other corporate issues. 
+                        Enty allows you to take care of accounting, invoicing, and other corporate issues.
                         Our subscriptions start from just €25.
                         Let’s try Enty! Also, explore our article about the costs of running a company in Estonia.
                     </p>
@@ -1090,20 +1085,20 @@
                             Can it be spent on my operational expenses?
                         </span>
                         <span class="questions__switcher">
-                            <img src="./assets/images/questions/show.png" alt="show/hide answer icon">                            
+                            <img src="./assets/images/questions/show.png" alt="show/hide answer icon">
                         </span>
                     </div>
                     <p class="questions__answer">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Donec mattis enim auctor arcu dignissim varius. Morbi luctus justo non mattis pharetra. 
-                        Donec sodales massa at ex imperdiet semper. Cras semper velit sed felis convallis sollicitudin. 
-                        Nulla vitae tristique nunc. Phasellus at elit viverra, malesuada est in, ullamcorper mauris. 
-                        In vehicula erat vel ipsum aliquet porta. Fusce tincidunt vestibulum metus, 
-                        non tincidunt augue consequat sit amet. Curabitur non erat molestie dui varius sagittis. 
-                        Phasellus elit augue, consequat id elit a, rutrum bibendum mi. 
-                        In pulvinar mauris id vehicula dignissim. Curabitur feugiat, tortor id tempus consectetur, 
-                        erat metus accumsan libero, non interdum dolor ligula ac tellus. Nulla et purus vestibulum, 
-                        gravida orci in, sodales libero. Suspendisse ipsum lorem, malesuada non vehicula vitae, 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec mattis enim auctor arcu dignissim varius. Morbi luctus justo non mattis pharetra.
+                        Donec sodales massa at ex imperdiet semper. Cras semper velit sed felis convallis sollicitudin.
+                        Nulla vitae tristique nunc. Phasellus at elit viverra, malesuada est in, ullamcorper mauris.
+                        In vehicula erat vel ipsum aliquet porta. Fusce tincidunt vestibulum metus,
+                        non tincidunt augue consequat sit amet. Curabitur non erat molestie dui varius sagittis.
+                        Phasellus elit augue, consequat id elit a, rutrum bibendum mi.
+                        In pulvinar mauris id vehicula dignissim. Curabitur feugiat, tortor id tempus consectetur,
+                        erat metus accumsan libero, non interdum dolor ligula ac tellus. Nulla et purus vestibulum,
+                        gravida orci in, sodales libero. Suspendisse ipsum lorem, malesuada non vehicula vitae,
                         accumsan at massa. Sed et neque odio.
                     </p>
                 </div>
@@ -1113,20 +1108,20 @@
                             Can I use the existing bank account for my new company?
                         </span>
                         <span class="questions__switcher">
-                            <img src="./assets/images/questions/show.png" alt="show/hide answer icon">                            
+                            <img src="./assets/images/questions/show.png" alt="show/hide answer icon">
                         </span>
                     </div>
                     <p class="questions__answer">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Donec mattis enim auctor arcu dignissim varius. Morbi luctus justo non mattis pharetra. 
-                        Donec sodales massa at ex imperdiet semper. Cras semper velit sed felis convallis sollicitudin. 
-                        Nulla vitae tristique nunc. Phasellus at elit viverra, malesuada est in, ullamcorper mauris. 
-                        In vehicula erat vel ipsum aliquet porta. Fusce tincidunt vestibulum metus, 
-                        non tincidunt augue consequat sit amet. Curabitur non erat molestie dui varius sagittis. 
-                        Phasellus elit augue, consequat id elit a, rutrum bibendum mi. 
-                        In pulvinar mauris id vehicula dignissim. Curabitur feugiat, tortor id tempus consectetur, 
-                        erat metus accumsan libero, non interdum dolor ligula ac tellus. Nulla et purus vestibulum, 
-                        gravida orci in, sodales libero. Suspendisse ipsum lorem, malesuada non vehicula vitae, 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec mattis enim auctor arcu dignissim varius. Morbi luctus justo non mattis pharetra.
+                        Donec sodales massa at ex imperdiet semper. Cras semper velit sed felis convallis sollicitudin.
+                        Nulla vitae tristique nunc. Phasellus at elit viverra, malesuada est in, ullamcorper mauris.
+                        In vehicula erat vel ipsum aliquet porta. Fusce tincidunt vestibulum metus,
+                        non tincidunt augue consequat sit amet. Curabitur non erat molestie dui varius sagittis.
+                        Phasellus elit augue, consequat id elit a, rutrum bibendum mi.
+                        In pulvinar mauris id vehicula dignissim. Curabitur feugiat, tortor id tempus consectetur,
+                        erat metus accumsan libero, non interdum dolor ligula ac tellus. Nulla et purus vestibulum,
+                        gravida orci in, sodales libero. Suspendisse ipsum lorem, malesuada non vehicula vitae,
                         accumsan at massa. Sed et neque odio.
                     </p>
                 </div>
@@ -1136,20 +1131,20 @@
                             Can a foreigner open a company in Estonia?
                         </span>
                         <span class="questions__switcher">
-                            <img src="./assets/images/questions/show.png" alt="show/hide answer icon">                            
+                            <img src="./assets/images/questions/show.png" alt="show/hide answer icon">
                         </span>
                     </div>
                     <p class="questions__answer">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Donec mattis enim auctor arcu dignissim varius. Morbi luctus justo non mattis pharetra. 
-                        Donec sodales massa at ex imperdiet semper. Cras semper velit sed felis convallis sollicitudin. 
-                        Nulla vitae tristique nunc. Phasellus at elit viverra, malesuada est in, ullamcorper mauris. 
-                        In vehicula erat vel ipsum aliquet porta. Fusce tincidunt vestibulum metus, 
-                        non tincidunt augue consequat sit amet. Curabitur non erat molestie dui varius sagittis. 
-                        Phasellus elit augue, consequat id elit a, rutrum bibendum mi. 
-                        In pulvinar mauris id vehicula dignissim. Curabitur feugiat, tortor id tempus consectetur, 
-                        erat metus accumsan libero, non interdum dolor ligula ac tellus. Nulla et purus vestibulum, 
-                        gravida orci in, sodales libero. Suspendisse ipsum lorem, malesuada non vehicula vitae, 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec mattis enim auctor arcu dignissim varius. Morbi luctus justo non mattis pharetra.
+                        Donec sodales massa at ex imperdiet semper. Cras semper velit sed felis convallis sollicitudin.
+                        Nulla vitae tristique nunc. Phasellus at elit viverra, malesuada est in, ullamcorper mauris.
+                        In vehicula erat vel ipsum aliquet porta. Fusce tincidunt vestibulum metus,
+                        non tincidunt augue consequat sit amet. Curabitur non erat molestie dui varius sagittis.
+                        Phasellus elit augue, consequat id elit a, rutrum bibendum mi.
+                        In pulvinar mauris id vehicula dignissim. Curabitur feugiat, tortor id tempus consectetur,
+                        erat metus accumsan libero, non interdum dolor ligula ac tellus. Nulla et purus vestibulum,
+                        gravida orci in, sodales libero. Suspendisse ipsum lorem, malesuada non vehicula vitae,
                         accumsan at massa. Sed et neque odio.
                     </p>
                 </div>
@@ -1158,7 +1153,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="more">
             <h2 class="section-title">Read more about accounting and related products</h2>
             <div class="more__group">
@@ -1177,10 +1172,11 @@
             </div>
             <div class="subscribe">
                 <h3 class="subscribe__title">Don’t miss our product updates by subscribing to our newsletter</h3>
-                <div class="subscribe__wrapper">
-                    <input class="subscribe__input" type="text" placeholder="your email">
-                    <a class="subscribe__button hover-button" href="#/">subscribe</a>
-                </div>
+                <form class="subscribe__wrapper">
+                    <input class="subscribe__input" type="email" placeholder="your email" required size="64"
+                        maxlength="64">
+                    <button type="submit" class="subscribe__button hover-button">subscribe</button>
+                </form>
             </div>
         </div>
 
@@ -1222,7 +1218,7 @@
                 </p>
                 <p class="footer-text">
                     Developed with ❤️ by Entytech OÜ and
-                     Digirepresent Services OÜ (license № FIU000382)
+                    Digirepresent Services OÜ (license № FIU000382)
                 </p>
                 <div>
                     <p class="footer-text">We accept</p>
