@@ -1071,6 +1071,10 @@ a {
         overflow-y: auto;
     }
 
+    body:has(#nav-check:checked) {
+        overflow-y: hidden;
+    }
+
     .header__content {
         flex-direction: column;
     }
