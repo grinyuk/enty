@@ -8,15 +8,6 @@ if (isMobile) {
     document.getElementsByClassName("plans__container_mobile")[0].remove();
 }
 
-function myFunction() {
-    var x = document.getElementById("myNav");
-    if (x.className === "nav") {
-        x.className += " responsive";
-    } else {
-        x.className = "nav";
-    }
-}
-
 function handleBankingClick(myRadio) {
     document.getElementById("optionImage").src = `./assets/images/features/banking${myRadio.value}.png`;
 }
